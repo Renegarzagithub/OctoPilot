@@ -33,8 +33,9 @@ schemaModel = "./schema-model"
   [flywayDesktop.generate]
   undoScripts = true
 
-[redgateCompare.sqlserver]
-filterFile = "Filter.scpf"
+[redgateCompare]
+  [redgateCompare.sqlserver]
+  filterFile = "Filter.scpf"
 
 [redgateCompare.sqlserver.options.behavior]
 addCreateOrAlterForRerunnableScripts = false
@@ -125,3 +126,7 @@ dropPrimaryKeysIndexesAndUniqueConstraints = false
 reseedIdentityColumns = false
 skipIntegrityChecksForForeignKeys = false
 transportClrDataTypesAsBinary = false
+
+  [[redgateCompare.staticDataTables]]
+  schema = "dbo"
+  table = "States"

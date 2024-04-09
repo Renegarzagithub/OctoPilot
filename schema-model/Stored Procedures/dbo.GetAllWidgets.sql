@@ -8,7 +8,8 @@ AS
 BEGIN
 --comment
 	SELECT RecordID,
+		Octo_Widget
            Description 
-	FROM Widgets
+	FROM dbo.Widgets
 END
 GO
